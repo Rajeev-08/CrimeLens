@@ -1,9 +1,7 @@
-// frontend/src/components/layout/Sidebar.js
 import React, { useState, useEffect, Fragment } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
 
-// A generic MultiSelect component
 function MultiSelect({ label, options, selected, onChange }) {
     return (
         <div className="w-full">
