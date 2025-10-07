@@ -1,4 +1,4 @@
-// frontend/src/views/Dashboard.js
+
 import React, { Fragment } from 'react';
 import { Tab } from '@headlessui/react';
 import HotspotsTab from './tabs/HotspotsTab';
