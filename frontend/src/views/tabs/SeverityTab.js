@@ -1,4 +1,3 @@
-// frontend/src/views/tabs/SeverityTab.js
 import React, { useState, useEffect } from 'react';
 import { getSeverityBreakdown } from '../../services/api';
 import { Pie, Bar } from 'react-chartjs-2';
@@ -24,9 +23,9 @@ ChartJS.register(
 );
 
 const SEVERITY_COLORS = {
-    'High': 'rgba(239, 68, 68, 0.7)',  // Red
-    'Medium': 'rgba(249, 115, 22, 0.7)', // Orange
-    'Low': 'rgba(34, 197, 94, 0.7)',   // Green
+    'High': 'rgba(239, 68, 68, 0.7)', 
+    'Medium': 'rgba(249, 115, 22, 0.7)',
+    'Low': 'rgba(34, 197, 94, 0.7)',  
 };
 const SEVERITY_BORDER_COLORS = {
     'High': 'rgba(239, 68, 68, 1)',
@@ -58,7 +57,7 @@ const SeverityTab = ({ activeFilters }) => {
                     return;
                 }
 
-                // Prepare Pie Chart data
+                // Pie Chart data
                 setPieData({
                     labels: pie_chart.labels,
                     datasets: [{
@@ -70,7 +69,7 @@ const SeverityTab = ({ activeFilters }) => {
                     }],
                 });
 
-                // Prepare Bar Chart data
+                //Bar Chart data
                 const barLabels = bar_chart['AREA NAME'];
                 const severities = Object.keys(bar_chart).filter(key => key !== 'AREA NAME');
 
