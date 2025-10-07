@@ -1,4 +1,3 @@
-# backend/app/main.py
 
 from fastapi import FastAPI, UploadFile, File, HTTPException, Depends
 from fastapi.responses import StreamingResponse
