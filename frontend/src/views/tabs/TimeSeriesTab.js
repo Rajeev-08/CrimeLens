@@ -1,4 +1,3 @@
-// frontend/src/views/tabs/TimeSeriesTab.js
 import React, { useState, useEffect } from 'react';
 import { getTimeSeries } from '../../services/api';
 import { Line } from 'react-chartjs-2';
@@ -11,10 +10,9 @@ import {
     Title,
     Tooltip,
     Legend,
-    Filler, // Required for filling area charts (confidence interval)
+    Filler, //  for filling area charts (confidence interval)
 } from 'chart.js';
 
-// Register all necessary Chart.js components
 ChartJS.register(
     CategoryScale,
     LinearScale,
