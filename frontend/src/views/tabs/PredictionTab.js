@@ -1,8 +1,7 @@
-// frontend/src/views/tabs/PredictionTab.js
+
 import React, { useState } from 'react';
 import { trainModel } from '../../services/api';
 import { Bar } from 'react-chartjs-2';
-// Register necessary Chart.js components if not already done globally
 
 const PredictionTab = ({ activeFilters }) => {
     const [modelResult, setModelResult] = useState(null);
