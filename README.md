@@ -48,8 +48,7 @@ These instructions will get you a copy of the project up and running on your loc
 2.  Create and activate a virtual environment.
     ```bash
     python -m venv venv
-    source venv/bin/activate  # Linux/macOS
-    # .\venv\Scripts\activate  # Windows
+     .\venv\Scripts\activate  # Windows
     ```
 3.  Install the required Python packages.
     ```bash
@@ -77,12 +76,12 @@ These instructions will get you a copy of the project up and running on your loc
 2.  Install Node dependencies.
     ```bash
     npm install
-    # or yarn install
+    
     ```
 3.  Start the React development server.
     ```bash
     npm start
-    # or yarn start
+
     ```
     The dashboard will open in your browser at `http://localhost:3000`.
 
