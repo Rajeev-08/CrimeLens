@@ -1,7 +1,5 @@
-// frontend/src/components/ui/SafetyAssistant.js
 import React, { useState, useRef, useEffect } from 'react';
 
-// This is the new typing indicator component
 const TypingIndicator = () => (
     <div className="flex items-center space-x-1 p-1">
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse [animation-delay:-0.3s]"></div>
@@ -97,7 +95,7 @@ const SafetyAssistant = ({ crimeContext }) => {
                     {messages.map((msg) => (
                         <div key={msg.id} className={`flex mb-4 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
                             <div className={`py-3 px-4 rounded-lg max-w-xs text-sm shadow-md ${msg.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-white text-gray-800'}`}>
-                                {/* THE FIX: Show the TypingIndicator if the message is from the AI, the text is empty, and we are loading. */}
+                                {}
                                 {msg.sender === 'ai' && msg.text === '' && isLoading ? (
                                     <TypingIndicator />
                                 ) : (
