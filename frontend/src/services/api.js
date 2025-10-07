@@ -1,4 +1,3 @@
-// frontend/src/services/api.js
 import axios from 'axios';
 
 const API_URL = 'http://localhost:8000/api';
@@ -32,7 +31,6 @@ export const trainModel = (filters) => {
     return apiClient.post('/train-model', filters);
 };
 
-// --- New Function ---
 export const getSafetyTip = (message, crime_context) => {
     return apiClient.post('/safety-assistant', { message, crime_context });
 };
