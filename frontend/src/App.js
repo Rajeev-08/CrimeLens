@@ -1,9 +1,8 @@
-// frontend/src/App.js
 import React, { useState } from 'react';
 import Sidebar from './components/layout/Sidebar';
 import Dashboard from './views/Dashboard';
 import { uploadFile } from './services/api';
-import SafetyAssistant from './components/ui/SafetyAssistant'; // Import the new component
+import SafetyAssistant from './components/ui/SafetyAssistant'; 
 
 function App() {
     const [fileInfo, setFileInfo] = useState(null);
@@ -11,7 +10,7 @@ function App() {
     const [activeFilters, setActiveFilters] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
-    const [crimeContextForAI, setCrimeContextForAI] = useState([]); // State for AI context
+    const [crimeContextForAI, setCrimeContextForAI] = useState([]); 
 
     const handleFileUpload = async (file) => {
         setIsLoading(true);
@@ -26,15 +25,15 @@ function App() {
                 totalRecords: response.data.total_records,
             });
             setInitialFilters(response.data.filters);
-            // Initially, select all filters
+           
             const allFilters = {
                 areas: response.data.filters.areas,
                 crimes: response.data.filters.crimes,
                 severities: response.data.filters.severities,
             };
             setActiveFilters(allFilters);
-
-            // Set the initial context for the AI assistant (top 5 most frequent crimes)
+ 
+    
             setCrimeContextForAI(response.data.filters.crimes.slice(0, 5));
 
         } catch (err) {
@@ -48,7 +47,7 @@ function App() {
 
     const handleFilterChange = (newFilters) => {
         setActiveFilters(newFilters);
-        // Update AI context based on new filters
+    
         setCrimeContextForAI(newFilters.crimes.slice(0, 5));
     };
 
@@ -87,8 +86,8 @@ function App() {
                 )}
             </main>
 
-            {/* THE FIX: The assistant is now outside <main>, at the root level of the app layout. */}
-            {/* Its z-index will now work globally and correctly place it on top of all other elements. */}
+            {}
+            {}
             {initialFilters && <SafetyAssistant crimeContext={crimeContextForAI} />}
         </div>
     );
