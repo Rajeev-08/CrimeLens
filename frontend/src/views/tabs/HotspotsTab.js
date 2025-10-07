@@ -1,4 +1,3 @@
-// frontend/src/views/tabs/HotspotsTab.js
 
 import React, { useState, useEffect, useMemo } from 'react';
 import { getHotspots } from '../../services/api';
@@ -6,7 +5,6 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet.heat';
 
-// Fix for default marker icon issue with webpack
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
     iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
